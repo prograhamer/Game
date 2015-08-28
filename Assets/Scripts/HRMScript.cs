@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Truant;
-using Truant.Plus;
 using Truant.Plus.Devices;
 
-public class HRM : MonoBehaviour {
-	private static HRM _instance;
-
-	private AntConnection Connection;
+public class HRMScript : MonoBehaviour {
+	private static HRMScript _instance;
+	
 	private HeartRateMonitor Device;
 	private bool Initialized;
 
@@ -15,7 +12,6 @@ public class HRM : MonoBehaviour {
 		if(_instance == null)
 		{
 			_instance = this;
-			_instance.Initialize();
 		}
 		else
 		{
@@ -23,19 +19,10 @@ public class HRM : MonoBehaviour {
 		}
 	}
 
-	void OnDestroy()
+	void Start()
 	{
-		Connection.Disconnect();
-	}
-
-	private void Initialize()
-	{
-		Connection = AntPlusConnection.GetConnection();
-		Connection.Connect ();
-		
 		Device = new HeartRateMonitor();
-		
-		Connection.AddDevice (Device);
+		ANTScript.AddDevice(Device);
 
 		Initialized = true;
 	}

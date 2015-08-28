@@ -14,6 +14,8 @@ public class TextScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Display.text = "HR: " + HRM.GetHeartRate();
+		Display.text = "HR: " + HRMScript.GetHeartRate() +
+			" Speed: " + SpeedCadenceScript.GetSpeed() +
+				" Cadence: " + SpeedCadenceScript.GetCadence();
 	}
 }
