@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Truant.Plus.Devices;
+using Truant.Devices;
 
 public class HRMScript : MonoBehaviour {
 	private static HRMScript _instance;

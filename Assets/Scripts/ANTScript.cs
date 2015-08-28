@@ -3,7 +3,6 @@ using System;
 using System.Threading;
 using System.Collections;
 using Truant;
-using Truant.Plus;
 
 public class ANTScript : MonoBehaviour {
 	private static ANTScript _instance;

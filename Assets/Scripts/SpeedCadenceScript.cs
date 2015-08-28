@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Truant.Plus.Devices;
+using Truant.Devices;
 
 public class SpeedCadenceScript : MonoBehaviour {
 	private static SpeedCadenceScript _instance;
