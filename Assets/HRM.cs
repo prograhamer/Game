@@ -23,13 +23,17 @@ public class HRM : MonoBehaviour {
 		}
 	}
 
+	void OnDestroy()
+	{
+		Connection.Disconnect();
+	}
+
 	private void Initialize()
 	{
 		Connection = AntPlusConnection.GetConnection();
 		Connection.Connect ();
 		
 		Device = new HeartRateMonitor();
-		Device.Config = new DeviceConfig(12029, 1);
 		
 		Connection.AddDevice (Device);
 
