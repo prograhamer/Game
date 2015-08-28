@@ -14,7 +14,10 @@ public class CapsuleScript : MonoBehaviour {
 			Vector3 p = Capsule.position;
 			p.y = 1.09f + (int)hr / 100f;
 			Capsule.position = p;
+		}
 
+		if(speed != null)
+		{
 			Capsule.Rotate(0, (float)speed * Time.deltaTime, 0);
 		}
 	}
